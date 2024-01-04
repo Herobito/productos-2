@@ -1,0 +1,24 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+.botonMover, .botonCerrarCaja {
+    margin-top: 10px;
+}
+.pendiente {
+    background-color: #FFC0CB; /* Color rojo claro para productos pendientes */
+}
+.entregado {
+    background-color: #98FB98; /* Color verde claro para productos entregados */
+}

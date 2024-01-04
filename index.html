@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento de Entregas</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <h2>Productos Pendientes de Entrega</h2>
+
+    <form id="formAgregar">
+        <label for="nombreProducto">Nombre del Producto:</label>
+        <input type="text" id="nombreProducto" required>
+        
+        <label for="cantidadProducto">Cantidad:</label>
+        <input type="number" id="cantidadProducto" required>
+        
+        <label for="precioProducto">Precio del Producto:</label>
+        <input type="number" id="precioProducto" required>
+        
+        <button type="button" onclick="agregarProducto()">Agregar Producto</button>
+    </form>
+
+    <h2>Productos Entregados</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Monto Total</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="tablaPendientes">
+            <!-- La tabla de productos pendientes se llenará dinámicamente aquí -->
+        </tbody>
+    </table>
+
+    <h2>Productos Entregados</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Monto Total</th>
+            </tr>
+        </thead>
+        <tbody id="tablaEntregados">
+            <!-- La tabla de productos entregados se llenará dinámicamente aquí -->
+        </tbody>
+    </table>
+
+    <button class="botonMover" onclick="moverAEntregados()">Marcar como Entregado</button>
+    <button class="botonCerrarCaja" onclick="cerrarCaja()">Cerrar Caja</button>
+
+    <h3>Total Entregado: $<span id="totalEntregado">0</span></h3>
+    
+
+    <script src="https://html2pdf.app/v1.0.0-beta.4/html2pdf.bundle.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
